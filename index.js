@@ -3,5 +3,5 @@ button.addEventListener('click', handleClick)
 
 function handleClick() {
     const heading = document.querySelector('#dayHeading')
-    heading.textContent = 'click!'
+    heading.textContent = 'Cick!'
 }
