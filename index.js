@@ -1,7 +1,10 @@
-const button = document.querySelector('button')
-button.addEventListener('click', handleClick)
-
-function handleClick() {
-    const heading = document.querySelector('#dayHeading')
-    heading.textContent = 'Cick!'
+const form = document.querySelector('form#userForm')
+const handleSubmit = function(ev) {
+    ev.preventDefault()
+    const heading = document.querySelector('h1')
+    const input = document.querySelector('input')
+    heading.textContent = input.value
 }
+
+
+form.addEventListener('submit', handleSubmit)
