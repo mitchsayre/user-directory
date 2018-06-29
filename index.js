@@ -3,9 +3,10 @@ const handleSubmit = function(ev) {
     ev.preventDefault()
     const form = ev.target
     const users = document.querySelector('#users')
-    const userName = form.userName.value  
-    users.innerHTML += '<p>' + userName + '</p>'
-    form.userName.value = ''
+    const userName = form.userName.value 
+    const age = form.age.value 
+    users.innerHTML += '<p>' + userName + ', ' + age + '</p>'
+    form.reset()
 }
 
 
