@@ -5,9 +5,12 @@ const handleSubmit = function(ev) {
     const users = document.querySelector('#users')
     const userName = form.userName.value 
     const age = form.age.value 
-   
+    
+    const favoriteColor = form.favoriteColor.value
     const p = document.createElement('p')
-    p.textContent = `${userName}, ${age}`
+    p.style.backgroundColor = favoriteColor   
+   
+    p.textContent = `${userName}, ${age}, favorite Color: ${favoriteColor}`
     users.appendChild(p)
    
     form.reset()
