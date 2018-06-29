@@ -5,7 +5,7 @@ const handleSubmit = function(ev) {
     const users = document.querySelector('#users')
     const userName = form.userName.value 
     const age = form.age.value 
-    users.innerHTML += '<p>' + userName + ', ' + age + '</p>'
+    users.innerHTML += `<p>${userName}, ${age}</p>`
     form.reset()
     form.userName.focus()
 }
