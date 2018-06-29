@@ -4,7 +4,7 @@ const handleSubmit = function(ev) {
     const form = ev.target
     const users = document.querySelector('#users')
     const userName = form.userName.value  
-    users.textContent += ' ' + userName
+    users.innerHTML += '<p>' + userName + '</p>'
     form.userName.value = ''
 }
 
