@@ -15,15 +15,29 @@ const handleSubmit = function(ev) {
     const ageItem = document.createElement('li')
     ageItem.textContent = `Age: ${age}`
 
-    nameItem.style.backgroundColor = favoriteColor   
-   
-    nameItem.textContent = `${userName}, ${age}, favorite Color: ${favoriteColor}`
     
-    list.appendChild(nameItem)
-    users.appendChild(list)
-    list.appendChild(ageItem)
    
-   form.reset()
+    // nameItem.textContent = `${userName}, ${age}, favorite Color: ${favoriteColor}`
+    
+    const colorItem = document.createElement('li')
+    colorItem.textContent = 'favorite Color: '
+    
+    const colorDiv = document.createElement('div')
+    colorDiv.style.backgroundColor = favoriteColor
+    colorDiv.style.width = '6rem'
+    colorDiv.style.height = '3rem'
+    colorItem.appendChild(colorDiv)
+    
+    // colorItem.style.backgroundColor = favoriteColor   
+
+    list.appendChild(nameItem)
+    list.appendChild(ageItem)
+    list.appendChild(colorItem)
+
+    users.appendChild(list)
+  
+  
+    form.reset()
     form.userName.focus()
 }
 
