@@ -21,7 +21,7 @@ function renderListItem(label, value) {
 
 function renderList(data) {
     const list = document.createElement('ul')
-    Object.keys(data).forEach(function(label) {
+    Object.keys(data).forEach(label => {
         const item = renderListItem(label, data[label])
         list.appendChild(item)
     })
@@ -56,3 +56,4 @@ const handleSubmit = function(ev) {
 
 
 form.addEventListener('submit', handleSubmit) 
+ 
