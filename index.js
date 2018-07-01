@@ -10,35 +10,25 @@ function renderColor(color) {
 
 function renderListItem(label, value) {
    const item = document.createElement('li')
-   item.textConent = `${label}: ${value}`
-      return item
+   item.textContent = `${label}: ${value}`
+   return item
 }
 
 const handleSubmit = function(ev) {
     ev.preventDefault()
     const form = ev.target
-    const users = document.querySelector('#users')
+    const age = form.age.value   
     const userName = form.userName.value 
-    const age = form.age.value 
+    const favoriteColor = form.favoriteColor.value  
     
-    const favoriteColor = form.favoriteColor.value
-   
+    const users = document.querySelector('#users') 
     const list = document.createElement('ul')
-
-    const ageItem = document.createElement('li')
-    ageItem.textContent = `Age: ${age}`
-
-    
-   
-    // nameItem.textContent = `${userName}, ${age}, favorite Color: ${favoriteColor}`
     
     const colorItem = document.createElement('li')
-    colorItem.textContent = 'favorite Color: '
-    
-    
-    
-    // colorItem.style.backgroundColor = favoriteColor   
+    colorItem.textContent = 'Favorite color: '
     colorItem.appendChild(renderColor(favoriteColor))
+   
+    
     list.appendChild(renderListItem('Name', userName))
     list.appendChild(renderListItem('Age', age))
     list.appendChild(colorItem)
